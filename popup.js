@@ -56,6 +56,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+	
+	// Function to display Bootstrap alerts
+	function showAlert(message, type) {
+		const alertContainer = document.createElement('div');
+		alertContainer.className = `alert alert-${type} alert-dismissible fade show`;
+		alertContainer.role = 'alert';
+		alertContainer.innerHTML = `
+			${message}
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		`;
+
+		// Add the alert to the top of the container
+		const container = document.querySelector('.container');
+		container.insertBefore(alertContainer, container.firstChild);
+
+		// Auto-dismiss alert after 3 seconds
+		setTimeout(() => {
+			alertContainer.classList.remove('show');
+			alertContainer.classList.add('fade');
+
+			// Use a timeout to remove the element from the DOM after fade transition
+			setTimeout(() => {
+				alertContainer.remove();
+			}, 150); // Matches the CSS transition duration for fade
+		}, 3000);
+	}
+
 
     // Function to remove a channel from the blacklist
     function removeChannel(channel) {
