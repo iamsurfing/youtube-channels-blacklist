@@ -13,8 +13,15 @@ function deleteVideosByChannel(blacklistedChannels) {
       blacklistedChannels.forEach((channel) => {
         if (href.includes(`/@${channel}`)) {
           // Remove the video element from the DOM
-          videoElement.remove();
+          //videoElement.remove();
+		  videoElement.style.visibility = "hidden";
+		  videoElement.style.height = "0px";
         }
+		else {
+			// Re-show element if removed from blacklist
+			videoElement.style.visibility = "visible";
+			videoElement.style.height = "100%";
+		};
       });
     }
   });
