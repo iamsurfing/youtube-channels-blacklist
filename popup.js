@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Add a remove button
                 const removeButton = document.createElement('button');
-                removeButton.className = 'btn btn-danger btn-sm';
-                removeButton.textContent = 'Remove';
+                removeButton.className = 'btn btn-success btn-sm';
+                removeButton.textContent = 'Restore';
                 removeButton.onclick = function() {
                     removeChannel(channel);
                 };

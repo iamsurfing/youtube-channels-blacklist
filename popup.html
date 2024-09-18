@@ -6,36 +6,73 @@
   <title>YouTube Channel Blacklist</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
+      margin-top: 20px;
     }
+	footer {
+		margin-top:20px;
+	}
     .form-control {
       margin-bottom: 10px;
     }
-	.container {
+    .container {
       width: 375px; /* Increased width */
-	  max-height: 600px;
+      max-height: 600px;
     }
     .btn {
       margin-top: 10px;
     }
+    /* danger button */
+    .btn-danger {
+        background-color: red;
+        color: white;
+        border-color: red;
+        border-radius: red;
+    }
+    .btn-danger:hover,
+    .btn-danger:focus,
+    .btn-danger:active {
+        background-color: red;
+        color: white;
+        border-color: red;
+    }
+    /* Vertically center the container */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h3 class="mb-4">YouTube Channels Filter</h3>
+  <div class="centered-container">
+    <div class="container text-center">
+      <h3 class="mb-4"><b>YouTube Channel Blacklist</b></h3>
     
-    <div class="mb-3">
-      <input type="text" class="form-control" id="channelInput" placeholder="Enter Channel Name" />
-      <button class="btn btn-danger w-100" id="addChannelButton">Add to Blacklist</button>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="channelInput" placeholder="Enter Channel Name" />
+        <button class="btn btn-danger w-100" id="addChannelButton">Add to Blacklist</button>
+      </div>
+    
+      <h4 class="mt-4 mb-3">Blacklisted Channels</h4>
+      <ul class="list-group" id="blacklist"></ul>
     </div>
-    
-    <h4 class="mt-4 mb-3">Blacklisted Channels</h4>
-    <ul class="list-group" id="blacklist"></ul>
   </div>
+  
+  <!-- Footer -->
+<footer class="bg-body-tertiary text-center">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="fw-bold" href="https://federicogentile.github.io/" target="blank_">federicogentile.github.io</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
