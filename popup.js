@@ -106,9 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const supportMeLink = document.getElementById('supportMeLink');
     const supportOptions = document.getElementById('supportOptions');
+    const lightningLink = document.getElementById('lightningLink');
+    const lightningOptions = document.getElementById('lightningOptions');
 
     supportMeLink.addEventListener('click', function() {
         // Toggle the collapse manually
         supportOptions.classList.toggle('show');
+    });
+    lightningLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        lightningOptions.classList.toggle('show');
     });
 });
