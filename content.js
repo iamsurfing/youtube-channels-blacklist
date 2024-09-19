@@ -1,29 +1,40 @@
 function deleteVideosByChannel(blacklistedChannels) {
-	
-  // Select all video elements within the section
-  const videoElements = document.querySelectorAll('ytd-video-renderer.style-scope.ytd-item-section-renderer, ytd-video-renderer.style-scope.ytd-vertical-list-renderer');
+  // Select all relevant video elements including ytd-compact-video-renderer
+  const videoElements = document.querySelectorAll([
+    'ytd-video-renderer.style-scope.ytd-item-section-renderer',
+    'ytd-video-renderer.style-scope.ytd-vertical-list-renderer',
+    'ytd-compact-video-renderer.style-scope.ytd-item-section-renderer',
+    'ytd-compact-video-renderer.style-scope.ytd-compact-video-renderer', // Include this format as well
+  ].join(', '));
 
   // Loop through each video element
   videoElements.forEach((videoElement) => {
-    // Find the <a> tag inside the video element that contains the channel href
-    const channelLink = videoElement.querySelector('a.yt-simple-endpoint.style-scope.yt-formatted-string[href]');
+    // Find the channel name element within the video renderer
+    const channelLink = videoElement.querySelector('ytd-channel-name a');
+    const channelText = videoElement.querySelector('ytd-channel-name yt-formatted-string');
 
+    // Extract the channel name
+    let channelName = '';
     if (channelLink) {
-      const href = channelLink.getAttribute('href');
-      // Check if the href exists in the blacklisted channels
+      channelName = channelLink.textContent.trim();
+    } else if (channelText) {
+      channelName = channelText.textContent.trim();
+    }
+
+    if (channelName) {
       let isBlacklisted = false;
       blacklistedChannels.forEach((channel) => {
-        if (href.includes(`/@${channel}`)) {
+        if (channelName === channel) {
           isBlacklisted = true;
         }
       });
 
       if (isBlacklisted) {
-        // Hide the video element
+        // Hide the video element if blacklisted
         videoElement.style.visibility = "hidden";
         videoElement.style.height = "0px";
       } else {
-        // Re-show element if not blacklisted
+        // Show the video element if not blacklisted
         videoElement.style.visibility = "visible";
         videoElement.style.height = "100%";
       }
@@ -34,10 +45,7 @@ function deleteVideosByChannel(blacklistedChannels) {
 // Function to fetch blacklisted channels and apply the filter
 function updateVideoList() {
   chrome.storage.sync.get({ blacklistedChannels: [] }, function(data) {
-    //if (data.blacklistedChannels.length > 0) {
-      deleteVideosByChannel(data.blacklistedChannels);
-    //}
-
+    deleteVideosByChannel(data.blacklistedChannels);
   });
 }
 
