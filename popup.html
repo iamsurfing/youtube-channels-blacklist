@@ -11,7 +11,12 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin-top: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+      background-color: red;
+      color: white;
+      ;
     }
 	footer {
 		margin-top:20px;
@@ -22,7 +27,7 @@
     .container {
       width: 375px; /* Increased width */
       max-height: 600px;
-    }
+      overflow-y: auto;}
     .btn {
       margin-top: 10px;
     }
@@ -49,9 +54,17 @@
   </style>
 </head>
 <body>
+	<!-- Navbar: image and text -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <i class="fa fa-youtube-play" style="font-size:48px;color:red;"></i>
+    <!-- Add span title and align it in the middle height of the navbar -->
+    <span class="ml-2">YouTube Channels Blacklist</span>
+  </a>
+</nav>
   <div class="centered-container">
     <div class="container text-center">
-      <h3 class="mb-4"><b>YouTube Channel Blacklist</b></h3>
+      <!--h3 class="mb-4"><b>YouTube Channels Blacklist</b></h3-->
     
       <div class="mb-3">
         <input type="text" class="form-control" id="channelInput" placeholder="Enter Channel Name" />
@@ -63,16 +76,28 @@
     </div>
   </div>
   
-  <!-- Footer -->
-<footer class="bg-body-tertiary text-center">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Copyright:
-    <a class="fw-bold" href="https://federicogentile.github.io/" target="blank_">federicogentile.github.io</a>
+ <!-- Footer -->
+<footer class="bg-dark text-white mt-5 p-2">
+  <div class="container text-center">
+    <!-- Personal Website -->
+    <div class="mb-2">
+      <a href="https://federicogentile.github.io/" class="text-white" target="_blank">federicogentile.com</a>
+    </div>
+    
+    <!-- Social Icons -->
+    <div class="d-flex justify-content-center">
+      <a href="https://stackoverflow.com/users/4143292/federico-gentile" target="_blank" class="text-white mx-2">
+        <i class="fa fa-stack-overflow" style="font-size:20px;"></i>
+      </a>
+      <a href="https://github.com/FedericoGentile" target="_blank" class="text-white mx-2">
+        <i class="fa fa-github" style="font-size:20px;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/federico-gentile-b1091552/" target="_blank" class="text-white mx-2">
+        <i class="fa fa-linkedin" style="font-size:20px;"></i>
+      </a>
+    </div>
   </div>
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>

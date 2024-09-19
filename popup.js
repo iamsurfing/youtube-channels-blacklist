@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Add a remove button
                 const removeButton = document.createElement('button');
-                removeButton.className = 'btn btn-success btn-sm';
+                removeButton.className = 'btn btn-info btn-sm';
                 removeButton.textContent = 'Restore';
                 removeButton.onclick = function() {
                     removeChannel(channel);
