@@ -103,4 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial load
     updateBlacklist();
+
+    const supportMeLink = document.getElementById('supportMeLink');
+    const supportOptions = document.getElementById('supportOptions');
+
+    supportMeLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        supportOptions.classList.toggle('show');
+    });
 });

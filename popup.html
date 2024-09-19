@@ -11,25 +11,20 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-	<!-- Navbar: image and text -->
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand d-flex align-items-center" href="#">
-    <!-- Add image to the navbar -->
-    <img src="./img/icon_128.png" style="width:20%;padding-left:10px;padding-right:15px;">
-    <!--i class="fa fa-hand-middle-finger" style="font-size:48px;color:red;padding-left:10px;padding-right:15px;"></i-->
-    <!-- Add span title and align it in the middle height of the navbar -->
-    <span class="ml-2">YouTube Channels Blacklist</span>
-  </a>
-</nav>
+  <!-- Navbar: image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <!-- Add image to the navbar -->
+      <img src="./img/icon_128.png" style="width:20%;padding-left:10px;padding-right:15px;">
+      <span class="ml-2">YouTube Channels Blacklist</span>
+    </a>
+  </nav>
   <div class="centered-container">
     <div class="container text-center">
-      <!--h3 class="mb-4"><b>YouTube Channels Blacklist</b></h3-->
-    
       <div class="mb-3">
         <input type="text" class="form-control" id="channelInput" placeholder="Enter Channel Name" />
         <button class="btn btn-danger w-100" id="addChannelButton">Add to Blacklist</button>
       </div>
-    
       <h4 class="mt-4 mb-3">Blacklisted Channels</h4>
       <ul class="list-group" id="blacklist"></ul>
     </div>
@@ -39,12 +34,12 @@
 <footer class="bg-dark text-white mt-5 p-2">
   <div class="container text-center">
     <!-- Personal Website -->
-    <div class="mb-2">
+    <!--div class="mb-2">
       <a href="https://federicogentile.github.io/" class="text-white" target="_blank">federicogentile.com</a>
-    </div>
+    </div-->
     
     <!-- Social Icons -->
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mb-3">
       <a href="https://stackoverflow.com/users/4143292/federico-gentile" target="_blank" class="text-white mx-2">
         <i class="fa-brands fa-stack-overflow" style="font-size:20px;"></i>
       </a>
@@ -54,6 +49,18 @@
       <a href="https://www.linkedin.com/in/federico-gentile-b1091552/" target="_blank" class="text-white mx-2">
         <i class="fa-brands fa-linkedin" style="font-size:20px;"></i>
       </a>
+    </div>
+    
+    <!-- Support Me Section -->
+    <div>
+      <a href="#" class="text-white" id="supportMeLink" data-bs-toggle="collapse" data-bs-target="#supportOptions" aria-expanded="false" aria-controls="supportOptions">Support Me</a>
+      <div class="collapse mt-2" id="supportOptions">
+        <ul class="list-group">
+          <li class="list-group-item bg-dark text-white"><a href="#" target="_blank" class="text-white">Bitcoin</a></li>
+          <li class="list-group-item bg-dark text-white"><a href="https://ko-fi.com/federicogentile90/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;" target="_blank" class="text-white">Buy Me a Coffee</a></li>
+          <li class="list-group-item bg-dark text-white"><a href="#" target="_blank" class="text-white">Lightning Network</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
