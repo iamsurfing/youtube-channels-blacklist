@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    margin-bottom: 20px;
+    background-color: red;
+    color: white;
+    ;
+  }
+  footer {
+      margin-top:20px;
+  }
+  .form-control {
+    margin-bottom: 10px;
+  }
+  .container {
+    width: 375px; /* Increased width */
+    max-height: 600px;
+    overflow-y: auto;}
+  .btn {
+    margin-top: 10px;
+  }
+  /* danger button */
+  .btn-danger {
+      background-color: red;
+      color: white;
+      border-color: red;
+      border-radius: red;
+  }
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-danger:active {
+      background-color: red;
+      color: white;
+      border-color: red;
+  }
+  /* Vertically center the container */
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
