@@ -8,5 +8,5 @@ Blacklist unwanted channels from your YouTube searches.
 1. Select the name of the channel you want to blacklist:
 <img src="./img/how_to_01.png" alt="how_to_01" />
 
-1. Write the name of the channel in the popup window and click **Add to Blacklist**:
+2. Write the name of the channel in the popup window and click **Add to Blacklist**:
 <img src="./img/how_to_02.png" alt="how_to_02" style="width: 50%; height: 50%;"/>
