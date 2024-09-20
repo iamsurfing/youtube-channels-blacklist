@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		alertContainer.role = 'alert';
 		alertContainer.innerHTML = `
 			${message}
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
 		`;
