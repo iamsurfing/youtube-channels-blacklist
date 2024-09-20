@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const supportOptions = document.getElementById('supportOptions');
     const lightningLink = document.getElementById('lightningLink');
     const lightningOptions = document.getElementById('lightningOptions');
+    const bitcoinLink = document.getElementById('bitcoinLink');
+    const bitcoinOptions = document.getElementById('bitcoinOptions');
 
     supportMeLink.addEventListener('click', function() {
         // Toggle the collapse manually
@@ -116,5 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
     lightningLink.addEventListener('click', function() {
         // Toggle the collapse manually
         lightningOptions.classList.toggle('show');
+    });
+    bitcoinLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        bitcoinOptions.classList.toggle('show');
     });
 });
