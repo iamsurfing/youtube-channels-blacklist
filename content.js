@@ -25,7 +25,7 @@ function deleteVideosByChannel(blacklistedChannels) {
     if (channelName) {
       let isBlacklisted = false;
       blacklistedChannels.forEach((channel) => {
-        if (channelName === channel) {
+        if (channelName.toLowerCase().includes(channel.toLowerCase())) {
           isBlacklisted = true;
         }
       });
