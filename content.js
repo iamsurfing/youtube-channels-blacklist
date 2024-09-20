@@ -4,7 +4,8 @@ function deleteVideosByChannel(blacklistedChannels) {
     'ytd-video-renderer.style-scope.ytd-item-section-renderer',
     'ytd-video-renderer.style-scope.ytd-vertical-list-renderer',
     'ytd-compact-video-renderer.style-scope.ytd-item-section-renderer',
-    'ytd-compact-video-renderer.style-scope.ytd-compact-video-renderer', // Include this format as well
+    'ytd-compact-video-renderer.style-scope.ytd-compact-video-renderer', 
+    'ytd-playlist-renderer.style-scope.ytd-item-section-renderer',
   ].join(', '));
 
   // Loop through each video element
