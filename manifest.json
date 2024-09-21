@@ -3,9 +3,9 @@
   "name": "YouTube Channel Blacklist",
   "version": "1.0",
   "icons": {
-		"16": "/img/icon_16.png",
-		"32": "/img/icon_32.png",
-		"128": "/img/icon_128.png"
+		"16": "./img/icon_16.png",
+		"48": "./img/icon_48.png",
+		"128": "./img/icon_128.png"
 	},
   "description": "Hide videos from blacklisted YouTube channels.",
   "permissions": [
