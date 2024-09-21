@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Retrieve blacklisted channels from storage
         chrome.storage.sync.get(['blacklistedChannels'], function(result) {
             const channels = result.blacklistedChannels.reverse() || [];
+
+            // Update the counter with the total number of channels
+            const counter = document.getElementById('counter');
+            counter.textContent = channels.length;
+
             channels.forEach(channel => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
@@ -123,4 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Toggle the collapse manually
         bitcoinOptions.classList.toggle('show');
     });
+    
+
 });
