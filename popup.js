@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Retrieve blacklisted channels from storage
         chrome.storage.sync.get(['blacklistedChannels'], function(result) {
-            const channels = result.blacklistedChannels || [];
+            const channels = result.blacklistedChannels.reverse() || [];
             channels.forEach(channel => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
