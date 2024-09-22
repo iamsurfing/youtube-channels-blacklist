@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filter channels based on search query
         const filteredChannels = blacklistedChannels.filter(channel =>
             channel.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        ).reverse(); // Reverse the order before displaying;
 
         // Update the counter with the total number of filtered channels
         const counter = document.getElementById('counter');
