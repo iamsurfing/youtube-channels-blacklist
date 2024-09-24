@@ -117,4 +117,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial load
     loadChannels();
+
+    // Support me section
+    const supportMeLink = document.getElementById('supportMeLink');
+    const supportOptions = document.getElementById('supportOptions');
+    const lightningLink = document.getElementById('lightningLink');
+    const lightningOptions = document.getElementById('lightningOptions');
+    const bitcoinLink = document.getElementById('bitcoinLink');
+    const bitcoinOptions = document.getElementById('bitcoinOptions');
+    supportMeLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        supportOptions.classList.toggle('show');
+    });
+    lightningLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        lightningOptions.classList.toggle('show');
+    });
+    bitcoinLink.addEventListener('click', function() {
+        // Toggle the collapse manually
+        bitcoinOptions.classList.toggle('show');
+    });
+
+    
 });
