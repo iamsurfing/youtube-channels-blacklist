@@ -24,12 +24,3 @@ function removeChannelFromBlacklist(channel) {
     chrome.storage.sync.set({ blacklistedChannels: updatedList });
   });
 }
-
-// Listen for messages from the popup to add/remove channels
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'add') {
-    addChannelToBlacklist(request.channel);
-  } else if (request.action === 'remove') {
-    removeChannelFromBlacklist(request.channel);
-  }
-});
