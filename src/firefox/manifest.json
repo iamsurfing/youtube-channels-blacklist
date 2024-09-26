@@ -5,7 +5,7 @@
     }
 },
     "manifest_version": 2,
-    "name": "YouTube Channel Blacklist",
+    "name": "YouTube Channels Blacklist",
     "version": "1.0",
   
     "description": "Hide videos from blacklisted YouTube channels.",
