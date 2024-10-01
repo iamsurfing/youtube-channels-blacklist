@@ -14,10 +14,6 @@ To function properly, the YouTube Channel Blacklist extension requires certain p
 
 Storage: We use chrome.storage.sync to store your list of blacklisted YouTube channels. This allows the extension to remember your preferences across sessions and devices (if you are signed into Chrome).
 
-ActiveTab: This permission allows the extension to interact with the currently open YouTube tab in your browser. It is required to modify the content of the YouTube page and hide videos from blacklisted channels.
-
-Scripting: We use scripting to inject code into YouTube pages that identifies and hides videos from blacklisted channels.
-
 Host Permissions (YouTube): The extension requires access to YouTube domains (https://www.youtube.com/* and https://m.youtube.com/*) to perform its function. It reads page content to identify video channels and filters content based on your blacklist.
 
 Third-Party Data Sharing
