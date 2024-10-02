@@ -6,7 +6,7 @@ Blacklist unwanted channels from your YouTube searches.
 
 ## Where to get it?
 Download it from:
-- [Chrome Web Store](https://chromewebstore.google.com/)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/youtube-channels-blacklis/fflnmimochcjpkfipdodclffaafgmchc?authuser=0&hl=it)
 - [Firefox Browser ADD-ONS](https://addons.mozilla.org/en-US/firefox/addon/youtube-channels-blacklist/)
 
 ## How to use it?
